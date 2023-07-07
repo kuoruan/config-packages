@@ -1,0 +1,40 @@
+{
+  "name": "@kuoruan/eslint-config-base",
+  "version": "0.0.1",
+  "description": "ESLint config for javascript project",
+  "main": "./index.js",
+  "keywords": [
+    "eslint",
+    "config",
+    "javascript"
+  ],
+  "files": [
+    "*.js",
+    "rules"
+  ],
+  "author": "Xingwang Liao<kuoruan@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/eslint-parser": "^7.22.6",
+    "@babel/plugin-syntax-import-attributes": "^7.22.5",
+    "@kuoruan/prettier-config-base": "workspace:^",
+    "any-eslint-parser": "^1.0.1",
+    "confusing-browser-globals": "^1.0.11",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-exports": "1.0.0-beta.5",
+    "eslint-import-resolver-node": "^0.3.7",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^5.0.0-alpha.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-sort-destructure-keys": "^1.5.0",
+    "eslint-plugin-unicorn": "^47.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.40.0",
+    "prettier": ">=3.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@kuoruan/prettier-config-base",
+  "version": "0.0.1",
+  "description": "Prettier base config and utils",
+  "main": "./index.js",
+  "keywords": ["prettier", "config", "utils"],
+  "author": "Xingwang Liao<kuoruan@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
