@@ -1,0 +1,25 @@
+{
+  "name": "@kuoruan/stylelint-config-base",
+  "version": "0.0.1",
+  "description": "Stylelint base config",
+  "main": "./index.js",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@kuoruan/prettier-config-base": "workspace:^",
+    "postcss-html": "^1.5.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-prettier": "^3.0.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0",
+    "prettier": "^3.0.0",
+    "stylelint": "^15.10.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
