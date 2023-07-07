@@ -18,6 +18,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": "https://github.com/kuoruan/config-packages.git",
   "dependencies": {
     "@kuoruan/eslint-config-base": "workspace:^",
     "@kuoruan/prettier-config": "workspace:^",

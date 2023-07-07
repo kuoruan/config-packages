@@ -18,6 +18,7 @@
   },
   "author": "Xingwang Liao<kuoruan@gmail.com>",
   "license": "MIT",
+  "repository": "https://github.com/kuoruan/config-packages.git",
   "dependencies": {
     "@babel/eslint-parser": "^7.22.7",
     "@babel/plugin-syntax-import-attributes": "^7.22.5",
