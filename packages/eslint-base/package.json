@@ -15,7 +15,7 @@
   "author": "Xingwang Liao<kuoruan@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@babel/eslint-parser": "^7.22.6",
+    "@babel/eslint-parser": "^7.22.7",
     "@babel/plugin-syntax-import-attributes": "^7.22.5",
     "@kuoruan/prettier-config-base": "workspace:^",
     "any-eslint-parser": "^1.0.1",

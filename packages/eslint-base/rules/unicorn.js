@@ -24,13 +24,13 @@ module.exports = {
       {
         case: "kebabCase",
         ignore: [
-          "^[A-Z]\\w+\\.jsx$",
+          "^[A-Z]\\w+\\.[jt]sx$",
           // react next.js router page
-          "^\\[\\w+\\]\\.jsx?$",
+          "^\\[\\w+\\]\\.[jt]sx?$",
           // react hooks
-          "^use[A-Z]\\w+\\.js$",
+          "^use[A-Z]\\w+\\.[jt]s$",
           // react context
-          "^[A-Z]\\w+Context\\.js$",
+          "^[A-Z]\\w+Context\\.[jt]s$",
           // uppercase markdown files
           "^[A-Z]+\\.mdx?$",
         ],

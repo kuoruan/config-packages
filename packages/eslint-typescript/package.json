@@ -1,0 +1,35 @@
+{
+  "name": "@kuoruan/eslint-config-typescript",
+  "version": "1.0.0",
+  "description": "ESLint config for TypeScript projects",
+  "main": "./index.js",
+  "keywords": [
+    "eslint",
+    "typescript",
+    "config"
+  ],
+  "author": "Xingwang Liao<kuoruan@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "*.js",
+    "rules"
+  ],
+  "dependencies": {
+    "@kuoruan/eslint-config-base": "workspace:^",
+    "@kuoruan/prettier-config-base": "workspace:^",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-node": "^0.3.7",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^5.0.0-alpha.2"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.40.0",
+    "prettier": ">=3.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
