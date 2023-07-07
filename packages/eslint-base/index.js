@@ -45,6 +45,7 @@ module.exports = {
     },
     {
       files: ["*.md"],
+      parser: "any-eslint-parser",
       extends: ["plugin:prettier/recommended"],
       rules: {
         "prettier/prettier": ["error", getPrettierConfig("markdown")],
@@ -52,6 +53,7 @@ module.exports = {
     },
     {
       files: ["*.mdx"],
+      parser: "any-eslint-parser",
       extends: ["plugin:prettier/recommended"],
       rules: {
         "prettier/prettier": ["error", getPrettierConfig("mdx")],
@@ -59,6 +61,7 @@ module.exports = {
     },
     {
       files: ["*.json"],
+      parser: "any-eslint-parser",
       extends: ["plugin:prettier/recommended"],
       rules: {
         "prettier/prettier": ["error", getPrettierConfig("json")],
@@ -66,6 +69,7 @@ module.exports = {
     },
     {
       files: ["*.json5"],
+      parser: "any-eslint-parser",
       extends: ["plugin:prettier/recommended"],
       rules: {
         "prettier/prettier": ["error", getPrettierConfig("json5")],
@@ -73,6 +77,7 @@ module.exports = {
     },
     {
       files: ["*.{yml,yaml}"],
+      parser: "any-eslint-parser",
       extends: ["plugin:prettier/recommended"],
       rules: {
         "prettier/prettier": ["error", getPrettierConfig("yaml")],
