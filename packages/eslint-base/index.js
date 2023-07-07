@@ -1,4 +1,4 @@
-const { getPrettierConfig } = require("@kuoruan/prettier-config-base/utils");
+const { getPrettierConfig } = require("@kuoruan/prettier-config/utils");
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {

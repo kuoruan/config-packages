@@ -1,4 +1,4 @@
-const { getPrettierConfig } = require("@kuoruan/prettier-config-base/utils");
+const { getPrettierConfig } = require("@kuoruan/prettier-config/utils");
 
 module.exports = {
   extends: ["@kuoruan/eslint-config-base"],

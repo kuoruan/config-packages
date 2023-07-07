@@ -1,4 +1,4 @@
-const { getPrettierConfig } = require("@kuoruan/prettier-config-base");
+const { getPrettierConfig } = require("@kuoruan/prettier-config");
 
 /** @type {import("stylelint").Config} */
 module.exports = {

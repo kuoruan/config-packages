@@ -1,7 +1,7 @@
 {
-  "name": "@kuoruan/prettier-config-base",
+  "name": "@kuoruan/prettier-config",
   "version": "0.0.1",
-  "description": "Prettier base config and utils",
+  "description": "Prettier config and utils",
   "main": "./index.js",
   "keywords": ["prettier", "config", "utils"],
   "author": "Xingwang Liao<kuoruan@gmail.com>",
