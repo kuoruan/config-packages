@@ -1,6 +1,7 @@
 {
   "name": "@kuoruan/eslint-config-typescript",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "private": false,
   "description": "ESLint config for TypeScript projects",
   "main": "./index.js",
   "keywords": [
@@ -14,6 +15,9 @@
     "*.js",
     "rules"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@kuoruan/eslint-config-base": "workspace:^",
     "@kuoruan/prettier-config": "workspace:^",

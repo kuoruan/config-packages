@@ -1,6 +1,7 @@
 {
   "name": "@kuoruan/eslint-config-base",
   "version": "0.0.1",
+  "private": false,
   "description": "ESLint config for javascript project",
   "main": "./index.js",
   "keywords": [
@@ -12,6 +13,9 @@
     "*.js",
     "rules"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Xingwang Liao<kuoruan@gmail.com>",
   "license": "MIT",
   "dependencies": {

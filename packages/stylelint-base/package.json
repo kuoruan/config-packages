@@ -1,11 +1,19 @@
 {
   "name": "@kuoruan/stylelint-config-base",
   "version": "0.0.1",
+  "private": false,
   "description": "Stylelint base config",
   "main": "./index.js",
-  "keywords": [],
+  "keywords": [
+    "stylelint",
+    "config",
+    "base"
+  ],
   "author": "",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@kuoruan/prettier-config": "workspace:^",
     "postcss-html": "^1.5.0",

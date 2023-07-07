@@ -1,11 +1,18 @@
 {
   "name": "@kuoruan/prettier-config",
   "version": "0.0.1",
+  "private": false,
   "description": "Prettier config and utils",
   "main": "./index.js",
   "keywords": ["prettier", "config", "utils"],
   "author": "Xingwang Liao<kuoruan@gmail.com>",
   "license": "MIT",
+  "files": [
+    "*.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=16.0.0"
   }
