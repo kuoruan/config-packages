@@ -61,5 +61,5 @@ jobs:
       - name: Publish to GitHub Packages
         run: pnpm publish --filter "${{ env.PACKAGE_NAME }}"
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GHA_PAT }}
 
