@@ -9,11 +9,16 @@
     "config",
     "base"
   ],
-  "author": "",
+  "author": "Xingwang Liao<kuoruan@gmail.com>",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "index.js",
+    "lib",
+    "rules"
+  ],
   "repository": "https://github.com/kuoruan/config-packages.git",
   "dependencies": {
     "@kuoruan/prettier-config": "workspace:^",
