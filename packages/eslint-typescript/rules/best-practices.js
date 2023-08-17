@@ -1,7 +1,8 @@
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
   extends: [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked",
   ],
   rules: {
     // https://typescript-eslint.io/rules/no-explicit-any
@@ -31,5 +32,35 @@ module.exports = {
     // https://typescript-eslint.io/rules/return-await
     "no-return-await": "off",
     "@typescript-eslint/return-await": "error",
+
+    // https://typescript-eslint.io/rules/restrict-template-expressions
+    "@typescript-eslint/restrict-template-expressions": [
+      "error",
+      {
+        allowAny: true,
+        allowBoolean: true,
+        allowNullish: true,
+        allowNumber: true,
+        allowRegExp: true,
+      },
+    ],
+
+    // https://typescript-eslint.io/rules/no-floating-promises
+    "no-void": "off",
+    "@typescript-eslint/no-floating-promises": [
+      "error",
+      {
+        ignoreVoid: true,
+        ignoreIIFE: true,
+      },
+    ],
+
+    // https://typescript-eslint.io/rules/no-empty-interface
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        allowSingleExtends: true,
+      },
+    ],
   },
 };

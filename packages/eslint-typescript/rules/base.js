@@ -1,3 +1,4 @@
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -7,7 +8,7 @@ module.exports = {
       jsx: true,
     },
     jsxPragma: null,
-    project: ["**/tsconfig.json", "**/tsconfig.eslint.json"],
+    project: true,
     warnOnUnsupportedTypeScriptVersion: false,
   },
 };

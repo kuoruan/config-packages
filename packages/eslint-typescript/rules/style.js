@@ -1,3 +1,4 @@
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
   rules: {
     // https://typescript-eslint.io/rules/padding-line-between-statements

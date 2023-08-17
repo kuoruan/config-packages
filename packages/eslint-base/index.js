@@ -26,9 +26,9 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["*.{js,cjs,mjs,jsx}"],
+      files: ["**/*.{js,cjs,mjs,jsx}"],
       extends: [
-        ...["./rules/babel", "./rules/jsx"].map((r) => require.resolve(r)),
+        ...["./rules/javascript", "./rules/jsx"].map((r) => require.resolve(r)),
         "plugin:prettier/recommended",
       ],
       rules: {
@@ -36,7 +36,7 @@ module.exports = {
       },
     },
     {
-      files: ["*.{htm,htm}"],
+      files: ["**/*.{htm,htm}"],
       parser: "any-eslint-parser",
       extends: ["plugin:prettier/recommended"],
       rules: {
@@ -44,7 +44,7 @@ module.exports = {
       },
     },
     {
-      files: ["*.md"],
+      files: ["**/*.md"],
       parser: "any-eslint-parser",
       extends: ["plugin:prettier/recommended"],
       rules: {
@@ -52,7 +52,7 @@ module.exports = {
       },
     },
     {
-      files: ["*.mdx"],
+      files: ["**/*.mdx"],
       parser: "any-eslint-parser",
       extends: ["plugin:prettier/recommended"],
       rules: {
@@ -60,7 +60,7 @@ module.exports = {
       },
     },
     {
-      files: ["*.json"],
+      files: ["**/*.json"],
       parser: "any-eslint-parser",
       extends: ["plugin:prettier/recommended"],
       rules: {
@@ -68,7 +68,7 @@ module.exports = {
       },
     },
     {
-      files: ["*.json5"],
+      files: ["**/*.json5"],
       parser: "any-eslint-parser",
       extends: ["plugin:prettier/recommended"],
       rules: {
@@ -76,7 +76,7 @@ module.exports = {
       },
     },
     {
-      files: ["*.{yml,yaml}"],
+      files: ["**/*.{yml,yaml}"],
       parser: "any-eslint-parser",
       extends: ["plugin:prettier/recommended"],
       rules: {
