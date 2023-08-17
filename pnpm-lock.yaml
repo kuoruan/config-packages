@@ -41,9 +41,6 @@ importers:
       eslint-config-prettier:
         specifier: ^9.0.0
         version: 9.0.0(eslint@8.47.0)
-      eslint-import-resolver-exports:
-        specifier: 1.0.0-beta.5
-        version: 1.0.0-beta.5(eslint-plugin-import@2.28.0)(eslint@8.47.0)
       eslint-import-resolver-node:
         specifier: ^0.3.9
         version: 0.3.9
@@ -71,6 +68,21 @@ importers:
       resolve.exports:
         specifier: ^2.0.2
         version: 2.0.2
+
+  packages/eslint-react:
+    dependencies:
+      '@kuoruan/eslint-config-base':
+        specifier: workspace:^
+        version: link:../eslint-base
+      '@kuoruan/prettier-config':
+        specifier: workspace:^
+        version: link:../prettier
+      eslint:
+        specifier: '>=8.40.0'
+        version: 8.47.0
+      prettier:
+        specifier: '>=3.0.0'
+        version: 3.0.2
 
   packages/eslint-typescript:
     dependencies:
@@ -139,6 +151,27 @@ importers:
       stylelint-prettier:
         specifier: ^4.0.2
         version: 4.0.2(prettier@3.0.2)(stylelint@15.10.1)
+
+  packages/stylelint-react:
+    dependencies:
+      '@kuoruan/prettier-config':
+        specifier: workspace:^
+        version: link:../prettier
+      '@kuoruan/stylelint-config-base':
+        specifier: workspace:^
+        version: link:../stylelint-base
+      postcss:
+        specifier: ^8.0.0
+        version: 8.4.25
+      postcss-styled-jsx:
+        specifier: ^1.0.1
+        version: 1.0.1(postcss-syntax@0.36.2)(postcss@8.4.25)
+      prettier:
+        specifier: ^3.0.0
+        version: 3.0.2
+      stylelint:
+        specifier: ^15.10.0
+        version: 15.10.1
 
 packages:
 
@@ -1235,17 +1268,6 @@ packages:
       eslint: '>=7.0.0'
     dependencies:
       eslint: 8.47.0
-    dev: false
-
-  /eslint-import-resolver-exports@1.0.0-beta.5(eslint-plugin-import@2.28.0)(eslint@8.47.0):
-    resolution: {integrity: sha512-o6t0w7muUpXr7MkUVzD5igQoDfAQvTmcPp8HEAJdNF8eOuAO+yn6I/TTyMxz9ecCwzX7e02vzlkHURoScUuidg==}
-    peerDependencies:
-      eslint: '*'
-      eslint-plugin-import: '*'
-    dependencies:
-      eslint: 8.47.0
-      eslint-plugin-import: 2.28.0(@typescript-eslint/parser@6.4.0)(eslint-import-resolver-typescript@3.6.0)(eslint@8.47.0)
-      resolve.exports: 2.0.2
     dev: false
 
   /eslint-import-resolver-node@0.3.9:
@@ -2570,6 +2592,40 @@ packages:
     resolution: {integrity: sha512-M9dkSrmU00t/jK7rF6BZSZauA5MAaBW4i5EnJXspMwt4iqTh/L9j6fgMnbElEOfyRyfLfVbIHj/R52zHzAPe1Q==}
     peerDependencies:
       postcss: ^8.4.20
+    dependencies:
+      postcss: 8.4.25
+    dev: false
+
+  /postcss-styled-jsx@1.0.1(postcss-syntax@0.36.2)(postcss@8.4.25):
+    resolution: {integrity: sha512-508Vg2A0pHQstRxz8eoNYiT+RiCZdgE4EqN0x8oiPIZ/a6pp5q2NYefL39RRG8ORlxDehLHU3u/EOpux0kuATQ==}
+    peerDependencies:
+      postcss: ^8.4.7
+      postcss-syntax: ^0.36.2
+    dependencies:
+      postcss: 8.4.25
+      postcss-syntax: 0.36.2(postcss@8.4.25)
+    dev: false
+
+  /postcss-syntax@0.36.2(postcss@8.4.25):
+    resolution: {integrity: sha512-nBRg/i7E3SOHWxF3PpF5WnJM/jQ1YpY9000OaVXlAQj6Zp/kIqJxEDWIZ67tAd7NLuk7zqN4yqe9nc0oNAOs1w==}
+    peerDependencies:
+      postcss: '>=5.0.0'
+      postcss-html: '*'
+      postcss-jsx: '*'
+      postcss-less: '*'
+      postcss-markdown: '*'
+      postcss-scss: '*'
+    peerDependenciesMeta:
+      postcss-html:
+        optional: true
+      postcss-jsx:
+        optional: true
+      postcss-less:
+        optional: true
+      postcss-markdown:
+        optional: true
+      postcss-scss:
+        optional: true
     dependencies:
       postcss: 8.4.25
     dev: false

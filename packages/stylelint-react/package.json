@@ -1,0 +1,31 @@
+{
+  "name": "@kuoruan/stylelint-config-react",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Stylelint config for react",
+  "main": "./index.js",
+  "keywords": [
+    "stylelint",
+    "config",
+    "react"
+  ],
+  "author": "Xingwang Liao<kuoruan@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/kuoruan/config-packages.git",
+  "dependencies": {
+    "@kuoruan/prettier-config": "workspace:^",
+    "@kuoruan/stylelint-config-base": "workspace:^",
+    "postcss-styled-jsx": "^1.0.1"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0",
+    "prettier": "^3.0.0",
+    "stylelint": "^15.10.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

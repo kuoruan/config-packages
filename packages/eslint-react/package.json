@@ -1,0 +1,34 @@
+{
+  "name": "@kuoruan/eslint-config-react",
+  "version": "0.0.1",
+  "private": false,
+  "description": "ESLint config for React projects",
+  "main": "./index.js",
+  "keywords": [
+    "eslint",
+    "typescript",
+    "config",
+    "react"
+  ],
+  "author": "Xingwang Liao<kuoruan@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "*.js",
+    "rules"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/kuoruan/config-packages.git",
+  "dependencies": {
+    "@kuoruan/eslint-config-base": "workspace:^",
+    "@kuoruan/prettier-config": "workspace:^"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.40.0",
+    "prettier": ">=3.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
