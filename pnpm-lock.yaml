@@ -74,6 +74,9 @@ importers:
       '@kuoruan/eslint-config-base':
         specifier: workspace:^
         version: link:../eslint-base
+      '@kuoruan/eslint-config-typescript':
+        specifier: workspace:^
+        version: link:../eslint-typescript
       '@kuoruan/prettier-config':
         specifier: workspace:^
         version: link:../prettier
