@@ -22,6 +22,7 @@
   "repository": "https://github.com/kuoruan/config-packages.git",
   "dependencies": {
     "@kuoruan/eslint-config-base": "workspace:^",
+    "@kuoruan/eslint-config-typescript": "workspace:^",
     "@kuoruan/prettier-config": "workspace:^"
   },
   "peerDependencies": {

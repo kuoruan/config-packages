@@ -4,11 +4,11 @@ module.exports = {
   overrides: [
     {
       files: ["**/*.tsx"],
-      extends: ["./rules/best-practices"].map((r) => require.resolve(r)),
+      extends: ["./rules/best-practices", "./rules/react-refresh"].map((r) => require.resolve(r)),
     },
     {
       files: ["**/*.ts", "**/*.tsx"],
-      extends: ["./rules/react-hooks", "./rules/react-refresh"].map((r) => require.resolve(r)),
+      extends: ["./rules/react-hooks"].map((r) => require.resolve(r)),
     },
   ],
 };
