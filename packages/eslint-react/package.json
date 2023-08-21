@@ -23,7 +23,10 @@
   "dependencies": {
     "@kuoruan/eslint-config-base": "workspace:^",
     "@kuoruan/eslint-config-typescript": "workspace:^",
-    "@kuoruan/prettier-config": "workspace:^"
+    "@kuoruan/prettier-config": "workspace:^",
+    "eslint-plugin-hooks": "^0.4.3",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-refresh": "^0.4.3"
   },
   "peerDependencies": {
     "eslint": ">=8.40.0",
