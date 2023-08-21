@@ -53,13 +53,13 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Setup Node.js for GitHub Packages
-        uses: actions/setup-node@v3
-        with:
-          registry-url: 'https://npm.pkg.github.com'
+      # - name: Setup Node.js for GitHub Packages
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     registry-url: 'https://npm.pkg.github.com'
 
-      - name: Publish to GitHub Packages
-        run: pnpm publish --filter "${{ env.PACKAGE_NAME }}"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GHA_PAT }}
+      # - name: Publish to GitHub Packages
+      #   run: pnpm publish --filter "${{ env.PACKAGE_NAME }}"
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.GHA_PAT }}
 
