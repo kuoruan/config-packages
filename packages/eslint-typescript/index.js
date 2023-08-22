@@ -15,5 +15,9 @@ module.exports = {
         "prettier/prettier": ["error", getPrettierConfig("typescript")],
       },
     },
+    {
+      files: ["**/*.d.ts"],
+      extends: ["./rules/types"].map((r) => require.resolve(r)),
+    },
   ],
 };

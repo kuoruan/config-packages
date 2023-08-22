@@ -62,5 +62,18 @@ module.exports = {
         allowSingleExtends: true,
       },
     ],
+
+    // https://typescript-eslint.io/rules/prefer-nullish-coalescing
+    "@typescript-eslint/prefer-nullish-coalescing": [
+      "error",
+      {
+        ignorePrimitives: {
+          bigint: true,
+          boolean: true,
+          number: true,
+          string: true,
+        },
+      },
+    ],
   },
 };

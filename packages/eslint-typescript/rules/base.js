@@ -8,7 +8,8 @@ module.exports = {
       jsx: true,
     },
     jsxPragma: null,
-    project: true,
+    tsconfigRootDir: process.cwd(),
+    project: "./tsconfig.json",
     warnOnUnsupportedTypeScriptVersion: false,
   },
 };
