@@ -45,6 +45,15 @@ module.exports = {
       },
     ],
 
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        checksConditionals: false,
+        checksVoidReturn: false,
+        checksSpreads: false,
+      },
+    ],
+
     // https://typescript-eslint.io/rules/no-floating-promises
     "no-void": "off",
     "@typescript-eslint/no-floating-promises": [
