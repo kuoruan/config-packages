@@ -1,6 +1,6 @@
 {
   "name": "@kuoruan/eslint-config-react",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "description": "ESLint config for React projects",
   "main": "./index.js",
