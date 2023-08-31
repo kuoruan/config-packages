@@ -33,7 +33,13 @@ module.exports = {
     "no-constant-binary-expression": "off",
 
     // disallow use of constant expressions in conditions
-    "no-constant-condition": "warn",
+    // CHANGED
+    "no-constant-condition": [
+      "warn",
+      {
+        checkLoops: false,
+      },
+    ],
 
     // disallow control characters in regular expressions
     "no-control-regex": "error",

@@ -27,7 +27,7 @@ module.exports = {
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unresolved.md
     "import/no-unresolved": [
       "error",
-      { commonjs: true, caseSensitive: true, ignore: ["^virtual:"] },
+      { commonjs: true, caseSensitive: true, ignore: ["^virtual:", "^uno.css$"] },
     ],
 
     // ensure named imports coupled with named exports
@@ -70,21 +70,21 @@ module.exports = {
           "**/test/**", // tape, common npm pattern
           "**/tests/**", // also common npm pattern
           "**/spec/**", // mocha, rspec-like pattern
-          "./config{,s}/**", // webpack.config.js etc
+          "**/config{,s}/**", // webpack.config.js etc
           "**/__tests__/**", // jest pattern
           "**/__mocks__/**", // jest pattern
-          "./test.{js,jsx,cjs,mjs,ts,tsx}", // repos with a single test file
-          "./test-*.{js,jsx,cjs,mjs,ts,tsx}", // repos with multiple top-level test files
+          "**/test.{js,jsx,cjs,mjs,ts,tsx}", // repos with a single test file
+          "**/test-*.{js,jsx,cjs,mjs,ts,tsx}", // repos with multiple top-level test files
           "**/*{.,_}{test,spec}.{js,jsx,cjs,mjs,ts,tsx}", // tests where the extension or filename suffix denotes that it is a test
-          "./jest.*.{js,cjs,mjs,ts}", // jest config
-          "./*.config.{js,cjs,mjs,ts}", // config files
-          "./*.config.*.{js,cjs,mjs,ts}", // config files
-          "./*.conf.{js,cjs,mjs,ts}", // config files
-          "./*.conf.*.{js,cjs,mjs,ts}", // config files
-          "./gulpfile.{js,cjs,mjs,ts}", // gulp config
-          "./gulpfile.*.{js,cjs,mjs,ts}", // gulp config
-          "./Gruntfile{,.js,.cjs,.mjs,ts}", // grunt config
-          "./.*.{js,cjs,mjs,ts}", // other config
+          "**/jest.*.{js,cjs,mjs,ts}", // jest config
+          "**/*.config.{js,cjs,mjs,ts}", // config files
+          "**/*.config.*.{js,cjs,mjs,ts}", // config files
+          "**/*.conf.{js,cjs,mjs,ts}", // config files
+          "**/*.conf.*.{js,cjs,mjs,ts}", // config files
+          "**/gulpfile.{js,cjs,mjs,ts}", // gulp config
+          "**/gulpfile.*.{js,cjs,mjs,ts}", // gulp config
+          "**/Gruntfile{,.js,.cjs,.mjs,ts}", // grunt config
+          "**/.*.{js,cjs,mjs,ts}", // other config
         ],
         optionalDependencies: false,
       },

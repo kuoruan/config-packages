@@ -34,92 +34,16 @@ module.exports = {
         leadingUnderscore: "allow",
         trailingUnderscore: "allow",
       },
-      /**
-       * Allow PascalCase when it's used as a package name
-       * eg. `const { default: ExcelJS } = await import('exceljs')`
-       */
       {
-        selector: "variable",
-        format: ["camelCase", "UPPER_CASE", "PascalCase"],
-        leadingUnderscore: "allow",
-      },
-      {
-        selector: "variable",
-        types: ["boolean"],
-        format: ["camelCase", "UPPER_CASE"],
-      },
-      {
-        selector: "function",
-        format: ["camelCase", "PascalCase"],
-        leadingUnderscore: "allow",
-      },
-      {
-        selector: "parameter",
-        format: ["camelCase"],
-        leadingUnderscore: "allow",
-      },
-      {
-        selector: "memberLike",
-        modifiers: ["static", "public"],
-        format: ["camelCase", "UPPER_CASE"],
-      },
-      {
-        selector: "memberLike",
-        modifiers: ["private"],
-        format: ["camelCase"],
-        leadingUnderscore: "require",
-      },
-      {
-        selector: "memberLike",
-        modifiers: ["static", "private"],
-        format: ["camelCase", "UPPER_CASE"],
-        leadingUnderscore: "allow",
-      },
-      {
-        selector: "memberLike",
-        modifiers: ["protected"],
-        format: ["camelCase"],
-        leadingUnderscore: "allow",
-      },
-      {
-        selector: "memberLike",
-        modifiers: ["public"],
-        format: ["camelCase"],
+        selector: "property",
+        format: ["camelCase", "UPPER_CASE", "PascalCase", "snake_case"],
         leadingUnderscore: "forbid",
-      },
-      {
-        selector: "enumMember",
-        format: ["UPPER_CASE", "PascalCase"],
       },
       {
         selector: "typeLike",
         format: ["PascalCase"],
         leadingUnderscore: "forbid",
-      },
-      {
-        selector: "property",
-        format: ["camelCase", "snake_case"],
-        leadingUnderscore: "forbid",
-      },
-      {
-        selector: "property",
-        modifiers: ["static", "public"],
-        format: ["camelCase", "UPPER_CASE", "PascalCase"],
-      },
-      {
-        selector: "objectLiteralProperty",
-        format: ["camelCase", "UPPER_CASE", "PascalCase"],
-        leadingUnderscore: "forbid",
-      },
-      {
-        selector: "method",
-        modifiers: ["private"],
-        format: ["camelCase"],
-        leadingUnderscore: "allow",
-      },
-      {
-        selector: "interface",
-        format: ["PascalCase"],
+        trailingUnderscore: "forbid",
         custom: {
           regex: "^I[A-Z]",
           match: false,

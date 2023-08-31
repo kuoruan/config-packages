@@ -22,8 +22,8 @@
   "dependencies": {
     "@kuoruan/eslint-config-base": "workspace:^",
     "@kuoruan/prettier-config": "workspace:^",
-    "@typescript-eslint/eslint-plugin": "^6.4.1",
-    "@typescript-eslint/parser": "^6.4.1",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-import-resolver-typescript": "^3.6.0",
