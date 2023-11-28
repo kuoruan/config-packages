@@ -11,7 +11,6 @@ module.exports = {
       parserOpts: {
         plugins: ["jsx"],
       },
-      plugins: [require.resolve("@babel/plugin-syntax-import-attributes")],
     },
     requireConfigFile: false,
   },

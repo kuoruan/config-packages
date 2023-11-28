@@ -1,5 +1,5 @@
 const confusingBrowserGlobals = require("confusing-browser-globals");
-const { useOtherFunction, useWrapperFunction } = require("../messages");
+const { useOtherFunction, useWindowFunction } = require("../messages");
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
@@ -30,7 +30,7 @@ module.exports = {
       },
       ...confusingBrowserGlobals.map((name) => ({
         name,
-        message: useWrapperFunction(name),
+        message: useWindowFunction(name), // https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md
       })),
     ],
 

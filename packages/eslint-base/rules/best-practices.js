@@ -379,9 +379,9 @@ module.exports = {
     // https://eslint.org/docs/rules/no-useless-return
     "no-useless-return": "error",
 
-    // disallow use of void operator
+    // allow use of void operator, for Promise
     // https://eslint.org/docs/rules/no-void
-    "no-void": "error",
+    "no-void": "off",
 
     // disallow usage of configurable warning terms in comments: e.g. todo
     // https://eslint.org/docs/rules/no-warning-comments

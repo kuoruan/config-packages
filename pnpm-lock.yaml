@@ -23,9 +23,6 @@ importers:
       '@babel/eslint-parser':
         specifier: ^7.22.11
         version: 7.22.11(@babel/core@7.22.11)(eslint@8.48.0)
-      '@babel/plugin-syntax-import-attributes':
-        specifier: ^7.22.5
-        version: 7.22.5(@babel/core@7.22.11)
       '@kuoruan/prettier-config':
         specifier: workspace:^
         version: link:../prettier
@@ -319,11 +316,6 @@ packages:
       '@babel/helper-validator-identifier': 7.22.5
     dev: false
 
-  /@babel/helper-plugin-utils@7.22.5:
-    resolution: {integrity: sha512-uLls06UVKgFG9QD4OeFYLEGteMIAa5kpTPcFL28yuCIIzsf6ZyKZMllKVOCZFhiZ5ptnwX4mtKdWCBE/uT4amg==}
-    engines: {node: '>=6.9.0'}
-    dev: false
-
   /@babel/helper-simple-access@7.22.5:
     resolution: {integrity: sha512-n0H99E/K+Bika3++WNL17POvo4rKWZ7lZEp1Q+fStVbUi8nxPQEBOlTmCOxW/0JsS56SKKQ+ojAe2pHKJHN35w==}
     engines: {node: '>=6.9.0'}
@@ -388,16 +380,6 @@ packages:
     hasBin: true
     dependencies:
       '@babel/types': 7.22.11
-    dev: false
-
-  /@babel/plugin-syntax-import-attributes@7.22.5(@babel/core@7.22.11):
-    resolution: {integrity: sha512-KwvoWDeNKPETmozyFE0P2rOLqh39EoQHNjqizrI5B8Vt0ZNS7M56s7dAiAqbYfiAYOuIzIh96z3iR2ktgu3tEg==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-    dependencies:
-      '@babel/core': 7.22.11
-      '@babel/helper-plugin-utils': 7.22.5
     dev: false
 
   /@babel/template@7.22.5:

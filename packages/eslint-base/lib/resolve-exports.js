@@ -3,29 +3,7 @@
 const { resolve: resolveExports } = require("resolve.exports");
 const path = require("path");
 const fs = require("fs");
-
-/**
- * Finds package.json for a package
- *
- * @param {string} filepath
- * @param {string} packageName
- * @returns {string} package.json path
- */
-function findPackageJson(filepath, packageName) {
-  for (;;) {
-    const pkgFile = path.join(filepath, "node_modules", packageName, "package.json");
-
-    if (fs.existsSync(pkgFile)) {
-      return pkgFile;
-    }
-    const dir = path.dirname(filepath);
-
-    if (dir === filepath) {
-      return "";
-    }
-    filepath = dir;
-  }
-}
+const { builtinModules } = require("module");
 
 /**
  * @param {string} source source
@@ -37,42 +15,36 @@ const resolve = (source, file, config) => {
     return { found: false };
   }
 
-  const [packageNameOrScope, packageNameOrPath] = source.split("/", 3);
-  const packageName = packageNameOrScope.startsWith("@")
-    ? `${packageNameOrScope}/${packageNameOrPath}`
-    : packageNameOrScope;
-
-  const pkgFile = findPackageJson(path.dirname(file), packageName);
-
-  if (!pkgFile) {
-    return { found: false };
-  }
-
   try {
-    const pkg = JSON.parse(fs.readFileSync(pkgFile, "utf8"));
+    const moduleId = require.resolve(source, { paths: [path.dirname(file)] });
 
-    if (pkg.name !== packageName) {
+    if (builtinModules.includes(moduleId)) {
       return { found: false };
     }
 
-    const resolved = resolveExports(pkg, source, config);
+    return { found: true, path: moduleId };
+  } catch (e) {
+    if (e.code === "MODULE_NOT_FOUND" && e.path?.endsWith("/package.json")) {
+      // eslint-disable-next-line import/no-dynamic-require
+      const { exports, main, module, name } = require(e.path);
 
-    if (!resolved || resolved.length === 0) {
-      return { found: false };
-    }
+      const resolved = resolveExports({ name, exports, module, main }, source, config);
 
-    for (const r of resolved) {
-      const moduleId = path.join(path.dirname(pkgFile), r);
+      if (!resolved || resolved.length === 0) {
+        return { found: false };
+      }
 
-      if (fs.existsSync(moduleId)) {
-        return { found: true, path: moduleId };
+      for (const r of resolved) {
+        const moduleId = path.join(path.dirname(e.path), r);
+
+        if (fs.existsSync(moduleId)) {
+          return { found: true, path: moduleId };
+        }
       }
     }
-
-    return { found: false };
-  } catch {
-    return { found: false };
   }
+
+  return { found: false };
 };
 
 module.exports = {

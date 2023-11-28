@@ -22,7 +22,6 @@
   "repository": "https://github.com/kuoruan/config-packages.git",
   "dependencies": {
     "@babel/eslint-parser": "^7.22.11",
-    "@babel/plugin-syntax-import-attributes": "^7.22.5",
     "@kuoruan/prettier-config": "workspace:^",
     "any-eslint-parser": "^1.0.1",
     "confusing-browser-globals": "^1.0.11",
