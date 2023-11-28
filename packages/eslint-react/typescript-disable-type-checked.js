@@ -1,6 +1,6 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: ["@kuoruan/eslint-config-typescript"],
+  extends: ["@kuoruan/eslint-config-typescript/disable-type-checked"],
   overrides: [
     {
       files: ["**/*.tsx"],
