@@ -1,8 +1,8 @@
 /**
  * [Concentric-CSS](https://github.com/brandon-rhodes/Concentric-CSS) orders
  *
- * - From: [css-declaration-sorter](https://github.com/Siilwyn/css-declaration-sorter/blob/master/orders/concentric-css.mjs)
- * - With: [@mdn/browser-compat-data@4.2.1](https://github.com/mdn/browser-compat-data)
+ * - From: [css-declaration-sorter](https://github.com/Siilwyn/css-declaration-sorter/blob/master/src/orders/concentric-css.mjs)
+ * - With: [@mdn/browser-compat-data@5.3.17](https://github.com/mdn/browser-compat-data)
  *
  * 1. Positioning
  * 2. Visibility
@@ -61,6 +61,7 @@ module.exports = [
       "align-self",
       "justify-self",
       "vertical-align",
+      "baseline-source",
       "order",
       "float",
       "clear",
@@ -372,6 +373,10 @@ module.exports = [
       "font-palette",
       "font-size-adjust",
       "font-synthesis",
+      "font-synthesis-weight",
+      "font-synthesis-style",
+      "font-synthesis-small-caps",
+      "font-synthesis-position",
       "font-variant-alternates",
       "font-variant-caps",
       "font-variant-east-asian",
@@ -380,6 +385,7 @@ module.exports = [
       "font-variant-numeric",
       "font-variant-position",
       "font-variation-settings",
+      "font-feature-settings",
       "ascent-override",
       "descent-override",
       "line-gap-override",
@@ -397,6 +403,8 @@ module.exports = [
       "unicode-range",
       "user-select",
       "ruby-position",
+      "math-depth",
+      "math-style",
       "text-combine-upright",
       "text-align",
       "text-align-last",
