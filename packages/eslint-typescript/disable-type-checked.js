@@ -6,7 +6,7 @@ module.exports = {
     {
       files: ["**/*.{ts,cts,mts,tsx}"],
       extends: [
-        ...["./rules/base", './rules/type-checking', "./rules/best-practices", "./rules/style", "./rules/imports"].map((r) =>
+        ...["./rules/base", './rules/without-type-checking', "./rules/best-practices", "./rules/style", "./rules/imports"].map((r) =>
           require.resolve(r),
         ),
         "plugin:prettier/recommended",
